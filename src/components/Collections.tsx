@@ -2,6 +2,7 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Eye, Heart } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const Collections = () => {
   const collections = [
@@ -72,9 +73,11 @@ const Collections = () => {
                 />
                 <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
                   <div className="flex space-x-4">
-                    <Button size="icon" variant="secondary" className="bg-white/90 hover:bg-white">
-                      <Eye className="h-4 w-4" />
-                    </Button>
+                    <Link to={`/product/${item.id}`}>
+                      <Button size="icon" variant="secondary" className="bg-white/90 hover:bg-white">
+                        <Eye className="h-4 w-4" />
+                      </Button>
+                    </Link>
                     <Button size="icon" variant="secondary" className="bg-white/90 hover:bg-white">
                       <Heart className="h-4 w-4" />
                     </Button>
@@ -93,9 +96,11 @@ const Collections = () => {
                   <span className="text-lg font-semibold text-primary">
                     {item.price}
                   </span>
-                  <Button variant="outline" size="sm" className="border-primary text-primary hover:bg-primary hover:text-white">
-                    View Collection
-                  </Button>
+                  <Link to={`/product/${item.id}`}>
+                    <Button variant="outline" size="sm" className="border-primary text-primary hover:bg-primary hover:text-white">
+                      View Collection
+                    </Button>
+                  </Link>
                 </div>
               </CardContent>
             </Card>
