@@ -5,7 +5,7 @@ import Footer from "@/components/Footer";
 
 const Product = () => {
   return (
-    <div className="min-h-screen pt-20 bg-black text-white">
+    <div className="min-h-screen pt-20">
       <Navigation />
       <ProductDetail />
       <Footer />
