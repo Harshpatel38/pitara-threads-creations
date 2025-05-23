@@ -90,8 +90,10 @@
 
 .font-serif {
   font-family: 'Playfair Display', serif;
+  color: #ffffff;
 }
 
 .font-sans {
   font-family: 'Inter', sans-serif;
+  color: #f0f0f0;
 }
